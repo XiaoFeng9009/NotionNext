@@ -47,12 +47,12 @@ const {siteInfo} =useGlobal()
     <article
       {...aosProps}
       style={{ maxHeight: '60rem' }}
-      className='w-full lg:max-w-sm p-3 shadow mb-4 mx-2 bg-white dark:bg-hexo-black-gray hover:shadow-lg duration-200'>
+      className='w-full lg:max-w-sm p-3 shadow mb-4 mx-2 bg-white dark:bg-hexo-black-gray hover:shadow-lg duration-200 rounded-lg'>
       <div className='flex flex-col justify-between h-full'>
         {/* 封面图 */}
         {showPageCover && (
           <SmartLink href={post?.href} passHref legacyBehavior>
-            <div className='flex-grow mb-3 w-full duration-200 cursor-pointer transform overflow-hidden'>
+            <div className='flex-grow mb-3 w-full duration-200 cursor-pointer transform overflow-hidden rounded-lg'>
               <LazyImage
                 src={post?.pageCoverThumbnail}
                 alt={post?.title || siteConfig('TITLE')}
