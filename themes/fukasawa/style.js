@@ -21,10 +21,10 @@ const Style = () => {
         margin-bottom: .5rem;
     }
     
-    /* 大屏幕（宽度≥1024px）下显示3列 */
+    /* 大屏幕（宽度≥1024px）下显示4列 */
     @media (min-width: 1024px) {
         #theme-fukasawa .grid-container {
-        column-count: 3;
+        column-count: 4;
         column-gap: .5rem;
         }
     }
@@ -47,7 +47,7 @@ const Style = () => {
 
     .container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             grid-gap: 10px;
             padding: 10px;
         }
