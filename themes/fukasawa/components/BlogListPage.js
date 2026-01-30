@@ -6,7 +6,7 @@ import { debounce } from 'lodash'
 import { useEffect, useState } from 'react'
 import BlogCard from './BlogCard'
 import BlogPostListEmpty from './BlogListEmpty'
-import PaginationSimple from './PaginationSimple'
+import PaginationNumber from './PaginationNumber'
 /**
  * 文章列表分页表格
  * @param page 当前页
@@ -82,7 +82,7 @@ const BlogListPage = ({ page = 1, posts = [], postCount, siteInfo }) => {
             </div>
           )}
         </div>
-        <PaginationSimple page={page} showNext={showNext} />
+        <PaginationNumber page={page} totalPage={totalPage} />
       </div>
     )
   }
