@@ -94,10 +94,10 @@ const BlogListPage = ({ page = 1, posts = [], postCount, siteInfo }) => {
  */
 const calculateColumns = () => {
   if (!isBrowser) {
-    return 3
+    return 4
   } else {
     if (window.innerWidth >= 1024) {
-      return 3
+      return 4
     } else if (window.innerWidth >= 640) {
       return 2
     } else {

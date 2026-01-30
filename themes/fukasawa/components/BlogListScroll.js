@@ -55,7 +55,7 @@ const BlogListScroll = ({ posts }) => {
     const startIndex = (page - 1) * postsPerPage;
     const endIndex = startIndex + postsPerPage;
     const postsToShow = posts.slice(startIndex, endIndex);
-    const columns = 3; // 假设有3列
+    const columns = 4; // 假设有4列
 
     // 重新排列文章，保证列优先顺序
     const newFilterPosts = [];
