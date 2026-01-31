@@ -19,7 +19,7 @@ function GroupCategory ({ currentCategory, categories }) {
         </span>
       </summary>
     
-      <div id='category-list' className='dark:border-gray-600 flex flex-col'>
+      <div id='category-list' className='dark:border-gray-600 flex flex-col max-h-96 overflow-y-auto'>
         {Object.entries(groupedCategories).map(([letter, letterCategories]) => (
           <div key={letter} className="py-2 border-t border-gray-200 dark:border-gray-700">
             <div className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase px-2 py-1">{letter}</div>
