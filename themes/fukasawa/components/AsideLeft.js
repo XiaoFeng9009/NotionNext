@@ -120,7 +120,7 @@ function AsideLeft(props) {
 
   return (
     <div
-      className={`sideLeft relative ${isCollapsed ? 'w-0' : 'w-80'} duration-300 transition-all bg-white dark:bg-hexo-black-gray min-h-screen hidden lg:block z-20`}>
+      className={`sideLeft relative ${isCollapsed ? 'w-0' : 'w-96'} duration-300 transition-all bg-white dark:bg-hexo-black-gray min-h-screen hidden lg:block z-20`}>
       {/* 悬浮的折叠按钮 */}
       {FUKASAWA_SIDEBAR_COLLAPSE_BUTTON && (
         <div
@@ -164,12 +164,12 @@ function AsideLeft(props) {
           <AdSlot type='in-article' />
         </section>
 
-        {router.asPath !== '/tag' && (
+        {/* {router.asPath !== '/tag' && (
           <section className='flex flex-col'>
             <div className='w-12 my-4' />
             <GroupTag tags={tagOptions} currentTag={currentTag} />
           </section>
-        )}
+        )} */}
 
         {router.asPath !== '/category' && (
           <section className='flex flex-col'>
