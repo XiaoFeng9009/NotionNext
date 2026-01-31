@@ -10,14 +10,12 @@ function GroupCategory ({ currentCategory, categories }) {
   const groupedCategories = groupCategoriesByFirstLetter(categories)
 
   return <>
-    {/* <details className="group cursor-pointer"> */}
-      <summary className="list-none py-2 px-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-medium flex items-center">
-        <i className="fas fa-chevron-right mr-2 group-open:rotate-90 transition-transform duration-200 text-xs" />
-        <span>工作室or设计师</span>
+      <div className="py-2 px-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-medium flex items-center">
+        <span>工作室/设计师</span>
         <span className="ml-2 text-xs bg-gray-200 dark:bg-gray-700 rounded-full px-2 py-0.5">
           {categories.length}
         </span>
-      </summary>
+      </div>
     
       <div id='category-list' className='dark:border-gray-600 flex flex-col max-h-96 overflow-y-auto'>
         {Object.entries(groupedCategories).map(([letter, letterCategories]) => (
@@ -44,7 +42,6 @@ function GroupCategory ({ currentCategory, categories }) {
           </div>
         ))}
       </div>
-    {/* </details> */}
   </>
 }
 
