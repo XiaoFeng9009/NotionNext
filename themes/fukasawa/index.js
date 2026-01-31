@@ -115,9 +115,9 @@ const LayoutIndex = props => {
  */
 const LayoutPostList = props => {
   const { tagOptions } = props
-  const { router } = useGlobal()
   const POST_LIST_STYLE = siteConfig('POST_LIST_STYLE')
   return (
+    <>
       {/* 标签列表移到内容顶部 */}
       {tagOptions && tagOptions.length > 0 && (
         <div className="px-4 md:px-10 py-4 w-full bg-white dark:bg-gray-700 shadow-sm mb-4">
@@ -138,9 +138,6 @@ const LayoutPostList = props => {
                 </div>
               )
             })}
-          </div>
-        </div>
-      )}
           </div>
         </div>
       )}
