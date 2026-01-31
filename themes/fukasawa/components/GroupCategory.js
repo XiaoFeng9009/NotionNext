@@ -10,7 +10,7 @@ function GroupCategory ({ currentCategory, categories }) {
   const groupedCategories = groupCategoriesByFirstLetter(categories)
 
   return <>
-    <details className="group cursor-pointer">
+    {/* <details className="group cursor-pointer"> */}
       <summary className="list-none py-2 px-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-medium flex items-center">
         <i className="fas fa-chevron-right mr-2 group-open:rotate-90 transition-transform duration-200 text-xs" />
         <span>工作室or设计师</span>
@@ -44,7 +44,7 @@ function GroupCategory ({ currentCategory, categories }) {
           </div>
         ))}
       </div>
-    </details>
+    {/* </details> */}
   </>
 }
 

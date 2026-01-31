@@ -151,19 +151,6 @@ function AsideLeft(props) {
           <SearchInput {...props} />
         </section>
 
-        <section className='flex flex-col dark:text-gray-300'>
-          <div className='w-12 my-4' />
-          <Announcement post={notice} />
-        </section>
-
-        <section>
-          <MailChimpForm />
-        </section>
-
-        <section>
-          <AdSlot type='in-article' />
-        </section>
-
         {/* {router.asPath !== '/tag' && (
           <section className='flex flex-col'>
             <div className='w-12 my-4' />
@@ -180,6 +167,19 @@ function AsideLeft(props) {
             />
           </section>
         )}
+
+        <section className='flex flex-col dark:text-gray-300'>
+          <div className='w-12 my-4' />
+          <Announcement post={notice} />
+        </section>
+
+        <section>
+          <MailChimpForm />
+        </section>
+
+        <section>
+          <AdSlot type='in-article' />
+        </section>
 
         <section className='flex flex-col'>
           <div className='w-12 my-4' />

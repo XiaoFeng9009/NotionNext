@@ -115,24 +115,28 @@ const LayoutIndex = props => {
  */
 const LayoutPostList = props => {
   const { tagOptions } = props
+  const { router } = useGlobal()
   const POST_LIST_STYLE = siteConfig('POST_LIST_STYLE')
   return (
     <>
       {/* 标签列表移到内容顶部 */}
       {tagOptions && tagOptions.length > 0 && (
-        <div className="px-4 md:px-10 py-6 w-full bg-white dark:bg-gray-700 shadow-sm mb-4">
+        <div className="px-4 md:px-10 py-4 w-full bg-white dark:bg-gray-700 shadow-sm mb-4">
           <div className="flex flex-wrap gap-2">
             {tagOptions?.slice(0, 50)?.map(tag => {
+              const isSelected = router.asPath === `/tag/${encodeURIComponent(tag.name)}`
               return (
-                <div key={tag.name} className="p-1">
+                <div key={tag.name} className="p-0.5">
                   <SmartLink
                     href={`/tag/${encodeURIComponent(tag.name)}`}
                     passHref
-                    className={`cursor-pointer inline-block rounded hover:bg-gray-500 hover:text-white duration-200
-                      mr-2 py-1 px-2 text-sm whitespace-nowrap dark:hover:text-white
-                       ${'text-gray-600 hover:shadow-xl dark:border-gray-400 notion-' + tag.color + '_background dark:bg-gray-800'}` }>
+                    className={`cursor-pointer inline-block rounded duration-200
+                      mr-2 py-0.5 px-1.5 text-xs whitespace-nowrap scale-80
+                      ${isSelected 
+                        ? 'bg-gray-500 text-white' 
+                        : 'hover:bg-gray-500 hover:text-white text-gray-600 dark:text-gray-300 dark:hover:text-white notion-' + tag.color + '_background dark:bg-gray-800'}` }>
                     <div className='font-light dark:text-gray-400'>
-                      <i className='mr-1 fas fa-tag'/> {tag.name + (tag.count ? `(${tag.count})` : '')}
+                      {tag.name + (tag.count ? `(${tag.count})` : '')}
                     </div>
                   </SmartLink>
                 </div>
